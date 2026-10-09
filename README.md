@@ -1,6 +1,4 @@
-# SorenDevelopment website
-
-**By SorenDev Team**
+# SorenDev Page
 
 
-## All Rights Reserved
+**All rights reserved**
