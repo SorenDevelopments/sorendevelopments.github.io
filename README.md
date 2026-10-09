@@ -2,3 +2,5 @@
 
 **By SorenDev Team**
 
+
+## All Rights Reserved
