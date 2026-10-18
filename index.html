@@ -56,8 +56,7 @@ body{font-family:'Outfit',system-ui,-apple-system,sans-serif;background:#dceeff 
 #prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#5eb0ff,#a8d4ff,#5eb0ff);z-index:99;transition:width .1s;box-shadow:0 0 12px rgba(94,176,255,.7);border-radius:0 3px 3px 0}
 nav{position:sticky;top:12px;z-index:50;margin:12px auto;max-width:1120px;width:calc(100% - 24px);display:flex;align-items:center;gap:16px;padding:12px 22px;background:var(--glass-strong);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--glass-border);border-radius:60px;box-shadow:var(--glass-shadow),var(--glass-inner);flex-wrap:wrap;transition:all .3s ease}
 nav .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);text-decoration:none;font-size:1.1rem;letter-spacing:-.02em;text-shadow:0 2px 4px rgba(0,0,0,.3)}
-nav .brand-svg{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.1);box-shadow:0 4px 16px rgba(0,0,0,.2),inset 0 1px 1px rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
-nav .brand-svg svg{width:22px;height:22px}
+nav .brand img{width:34px;height:34px;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.2);object-fit:cover}
 nav .links{margin-inline-start:auto;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
 nav a.l{padding:8px 18px;border-radius:30px;color:var(--ink-soft);text-decoration:none;font-size:.92rem;font-weight:500;transition:all .25s cubic-bezier(.2,.9,.3,1);white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.3)}
 nav a.l:hover{background:rgba(255,255,255,.15);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.2),inset 0 1px 1px rgba(255,255,255,.2);transform:translateY(-1px)}
@@ -76,11 +75,8 @@ h2{font-size:clamp(1.7rem,3.8vw,2.4rem);font-weight:800;margin-bottom:10px;lette
 .btn.p:hover{box-shadow:0 20px 44px rgba(0,0,0,.5),inset 0 1px 1px rgba(255,255,255,.5);background:linear-gradient(135deg,rgba(94,176,255,1),rgba(61,158,255,1))}
 .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 .logo-wrap{position:relative;display:grid;place-items:center;padding:20px}
-.logo-glass{width:min(240px,60%);aspect-ratio:1;border-radius:44px;background:rgba(10,25,47,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.15);box-shadow:0 30px 80px rgba(0,0,0,.5),inset 0 1px 2px rgba(255,255,255,.2);animation:bob 6s ease-in-out infinite;position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
-.logo-glass svg{width:80px;height:80px;filter:drop-shadow(0 4px 12px rgba(94,176,255,.4))}
-.logo-glass span{color:#fff;font-weight:700;font-size:1.1rem;letter-spacing:.5px;text-shadow:0 2px 4px rgba(0,0,0,.8)}
-.logo-glass span b{color:#5eb0ff;font-weight:800}
-.ring{position:absolute;inset:-10%;border:2px dashed rgba(255,255,255,.3);border-radius:50%;opacity:.5;animation:spin 36s linear infinite;z-index:1}
+.logo-wrap img{width:min(280px,80%);height:auto;object-fit:contain;animation:bob 6s ease-in-out infinite;position:relative;z-index:2;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+.ring{position:absolute;inset:-5%;border:2px dashed rgba(255,255,255,.3);border-radius:50%;opacity:.5;animation:spin 36s linear infinite;z-index:1}
 .ring::after{content:"";position:absolute;inset:10%;border:1px solid rgba(255,255,255,.2);border-radius:50%;animation:spin 24s linear infinite reverse}
 @keyframes bob{50%{transform:translateY(-16px) rotate(-2deg)}}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -132,7 +128,7 @@ h2{font-size:clamp(1.7rem,3.8vw,2.4rem);font-weight:800;margin-bottom:10px;lette
 footer{padding:50px 20px 40px;color:var(--mute);border-top:1px solid rgba(255,255,255,.15);background:rgba(10,25,47,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);margin-top:20px}
 .footer-inner{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px}
 .footer-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:#fff;font-size:1.05rem;text-shadow:0 1px 2px rgba(0,0,0,.4)}
-.footer-brand svg{width:32px;height:32px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.4))}
+.footer-brand img{width:32px;height:32px;border-radius:8px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.4));border:1px solid rgba(255,255,255,.2)}
 .footer-socials{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 .footer-socials a{color:#fff;font-size:1.4rem;transition:all .35s cubic-bezier(.2,.9,.3,1);background:rgba(255,255,255,.1);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.2);text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.3),inset 0 1px 1px rgba(255,255,255,.2)}
 .footer-socials a:hover{color:#fff;transform:translateY(-6px) scale(1.05);border-color:rgba(255,255,255,.4)}
@@ -162,18 +158,7 @@ footer{padding:50px 20px 40px;color:var(--mute);border-top:1px solid rgba(255,25
 
 <nav>
 <a class="brand" href="#home">
-<div class="brand-svg">
-<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M70 25 H35 L20 45 L35 65 H70 L85 45 L70 25 Z" fill="url(#paint0_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="20" y1="25" x2="85" y2="65" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A8D4FF"/>
-<stop offset="0.5" stop-color="#5EB0FF"/>
-<stop offset="1" stop-color="#2A8CE6"/>
-</linearGradient>
-</defs>
-</svg>
-</div>
+<img src="logo.png" alt="SorenDevelopment logo">
 SorenDevelopment
 </a>
 <div class="links">
@@ -201,19 +186,7 @@ SorenDevelopment
 </div>
 <div class="logo-wrap">
 <div class="ring"></div>
-<div class="logo-glass">
-<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M70 25 H35 L20 45 L35 65 H70 L85 45 L70 25 Z" fill="url(#paint1_linear)"/>
-<defs>
-<linearGradient id="paint1_linear" x1="20" y1="25" x2="85" y2="65" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A8D4FF"/>
-<stop offset="0.5" stop-color="#5EB0FF"/>
-<stop offset="1" stop-color="#2A8CE6"/>
-</linearGradient>
-</defs>
-</svg>
-<span>Soren<b>Development</b></span>
-</div>
+<img src="logo.png" alt="SorenDevelopment logo">
 </div>
 </section>
 
@@ -338,16 +311,7 @@ SorenDevelopment
 <footer>
 <div class="footer-inner">
 <div class="footer-brand">
-<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M70 25 H35 L20 45 L35 65 H70 L85 45 L70 25 Z" fill="url(#paint2_linear)"/>
-<defs>
-<linearGradient id="paint2_linear" x1="20" y1="25" x2="85" y2="65" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A8D4FF"/>
-<stop offset="0.5" stop-color="#5EB0FF"/>
-<stop offset="1" stop-color="#2A8CE6"/>
-</linearGradient>
-</defs>
-</svg>
+<img src="logo.png" alt="SorenDevelopment logo">
 SorenDevelopment
 </div>
 <div class="footer-socials">
