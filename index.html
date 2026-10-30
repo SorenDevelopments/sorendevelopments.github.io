@@ -50,9 +50,6 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'Outfit',system-ui,-apple-system,sans-serif;background:#dceeff url('background.png') center/cover no-repeat fixed;color:var(--ink);line-height:1.7;overflow-x:hidden;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.b2{width:480px;height:480px;background:radial-gradient(circle,#3d9eff,transparent 70%);bottom:-120px;right:-120px;animation-delay:-11s}
-.b3{width:400px;height:400px;background:radial-gradient(circle,#a8d4ff,transparent 70%);top:40%;left:50%;animation-delay:-5s}
-@keyframes float{to{transform:translate(80px,60px) scale(1.2)}}
 #prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#5eb0ff,#a8d4ff,#5eb0ff);z-index:99;transition:width .1s;box-shadow:0 0 12px rgba(94,176,255,.7);border-radius:0 3px 3px 0}
 nav{position:sticky;top:12px;z-index:50;margin:12px auto;max-width:1120px;width:calc(100% - 24px);display:flex;align-items:center;gap:16px;padding:12px 22px;background:var(--glass-strong);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--glass-border);border-radius:60px;box-shadow:var(--glass-shadow),var(--glass-inner);flex-wrap:wrap;transition:all .3s ease}
 nav .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);text-decoration:none;font-size:1.1rem;letter-spacing:-.02em;text-shadow:0 2px 4px rgba(0,0,0,.3)}
@@ -88,7 +85,7 @@ h2{font-size:clamp(1.7rem,3.8vw,2.4rem);font-weight:800;margin-bottom:10px;lette
 .card h3{font-size:1.1rem;margin-bottom:6px;font-weight:700;letter-spacing:-.01em;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.3)}
 .card p{color:var(--mute);font-size:.94rem}
 .sk img{width:2.6rem;height:2.6rem;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(0,0,0,.3));transition:transform .3s}
-.sk:hover img{transform:scale(1.12)}  
+.sk:hover img{transform:scale(1.12)}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;background:var(--glass);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid var(--glass-border);border-radius:var(--radius);padding:30px 24px;box-shadow:var(--glass-shadow),var(--glass-inner);position:relative;overflow:hidden}
 .stats::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent)}
 .stat{text-align:center;padding:8px 6px}
