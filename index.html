@@ -49,7 +49,7 @@
 :root{--ink:#ffffff;--ink-soft:rgba(255,255,255,.9);--mute:rgba(255,255,255,.75);--glass:rgba(10,25,47,.65);--glass-strong:rgba(10,25,47,.85);--glass-border:rgba(255,255,255,.2);--glass-shadow:0 8px 32px rgba(0,0,0,.3);--glass-shadow-lg:0 20px 60px rgba(0,0,0,.4);--glass-inner:inset 0 1px 1px rgba(255,255,255,.15),inset 0 -1px 1px rgba(0,0,0,.2);--b1:#5eb0ff;--b2:#a8d4ff;--b3:#e0f0ff;--radius:24px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'Outfit',system-ui,-apple-system,sans-serif;background:#dceeff url('background.png') center/cover no-repeat fixed;color:var(--ink);line-height:1.7;overflow-x:hidden;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Outfit',system-ui,-apple-system,sans-serif;background:#dceeff;color:var(--ink);line-height:1.7;overflow-x:hidden;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-image:url('background.png');background-repeat:repeat;background-size:auto;background-attachment:scroll}
 #prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#5eb0ff,#a8d4ff,#5eb0ff);z-index:99;transition:width .1s;box-shadow:0 0 12px rgba(94,176,255,.7);border-radius:0 3px 3px 0}
 nav{position:sticky;top:12px;z-index:50;margin:12px auto;max-width:1120px;width:calc(100% - 24px);display:flex;align-items:center;gap:16px;padding:12px 22px;background:var(--glass-strong);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--glass-border);border-radius:60px;box-shadow:var(--glass-shadow),var(--glass-inner);flex-wrap:wrap;transition:all .3s ease}
 nav .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);text-decoration:none;font-size:1.1rem;letter-spacing:-.02em;text-shadow:0 2px 4px rgba(0,0,0,.3)}
@@ -85,7 +85,7 @@ h2{font-size:clamp(1.7rem,3.8vw,2.4rem);font-weight:800;margin-bottom:10px;lette
 .card h3{font-size:1.1rem;margin-bottom:6px;font-weight:700;letter-spacing:-.01em;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.3)}
 .card p{color:var(--mute);font-size:.94rem}
 .sk img{width:2.6rem;height:2.6rem;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(0,0,0,.3));transition:transform .3s}
-.sk:hover img{transform:scale(1.12)}
+.sk:hover img{transform:scale(1.12)}  
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;background:var(--glass);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid var(--glass-border);border-radius:var(--radius);padding:30px 24px;box-shadow:var(--glass-shadow),var(--glass-inner);position:relative;overflow:hidden}
 .stats::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent)}
 .stat{text-align:center;padding:8px 6px}
@@ -150,9 +150,6 @@ footer{padding:50px 20px 40px;color:var(--mute);border-top:1px solid rgba(255,25
 </head>
 <body>
 <canvas id="bg"></canvas>
-<div class="blob b1"></div>
-<div class="blob b2"></div>
-<div class="blob b3"></div>
 <div id="prog"></div>
 
 <nav>
@@ -181,7 +178,6 @@ SorenDevelopment
 <a class="btn p" href="https://github.com/SorenDevelopment" target="_blank" rel="noopener">
 <i class="fab fa-github"></i> GitHub
 </a>
-</div>
 </div>
 </div>
 </section>
@@ -306,6 +302,7 @@ SorenDevelopment
 
 <footer>
 <div class="footer-inner">
+</div>
 <div class="footer-brand">
 <img src="logo.png" alt="SorenDevelopment logo">
 SorenDevelopment
@@ -343,6 +340,7 @@ react:'<i class="fab fa-react" style="color:#61dafb"></i>',
 git:'<i class="fab fa-git-alt" style="color:#f05032"></i>',
 docker:'<i class="fab fa-docker" style="color:#2496ed"></i>',
 linux:'<i class="fab fa-linux" style="color:#fcc624"></i>',
+arduino:'<img src="arduino.png" alt="Arduino">',
 };
 
 const S=[
@@ -364,6 +362,7 @@ const S=[
 ["Git",ICON.git,"tools"],
 ["Docker",ICON.docker,"tools"],
 ["Linux",ICON.linux,"tools"],
+["Arduino",ICON.arduino,"tools"],
 ];
 
 const IGNORED_REPOS=[".github","sorendevelopments.github.io","SorenDevelopment.github.io","SorenDevelopments.github.io"];
